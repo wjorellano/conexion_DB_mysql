@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +14,44 @@
   <title>Conexion</title>
 </head>
 <body>
-  <form class="formulario"  method="POST">
+  <nav class="navbar fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Conexion</a>
+    <div class="custom-control custom-switch">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Sign up
+      </button>
+    </div>
+  </nav>
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <h3>log in</h3>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <form class="login modal-body" method="post">
+          <input type="email" name="correo" class="inputs" placeholder="Correo electronico">
+          <input type="password" name="contraseña" class="inputs" placeholder="Contraseña">
+          <input type="submit" class=" entrar btn btn-primary" value="Entrar" name="registrar">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  <form class="formulario "  method="POST">
     <h2>registro</h2>
     <input type="text" name="nombre" class="input"  placeholder="Nombre">
     <input type="text" name="apellido" class="input"  placeholder="Apellido">
     <input type="email" name="correo" class="inputs" placeholder="Correo electronico">
     <input type="password" name="contraseña" class="inputs" placeholder="Contraseña">
-    <input type="submit" class="btn btn-dark" value="Entrar" name="registrar">
+    <input type="submit" class=" entrar btn btn-primary" value="Entrar" name="registrar">
   </form>
   <?php
 
