@@ -28,7 +28,7 @@
       $correo = trim($_POST['correo']);
       $contraseña = trim($_POST['contraseña']);
       $fechareg = date("d/m/y");
-      $consulta = "INSERT INTO `user`(`Us_Nombre`, `Us_Apellido`, `Us_Correo`, `Us_Contraseña`, `US_Fecha_reg`)
+      $consulta = "INSERT INTO `user`(`Nombre`, `Apellido`, `Correo`, `Contraseña`, `Fecha`)
       VALUES ('$nombre','$apellido','$correo','$contraseña','$fechareg')";
       $resultado = mysqli_query($conexion,$consulta);
       if ($resultado) {
