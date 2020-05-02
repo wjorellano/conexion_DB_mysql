@@ -36,11 +36,12 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <form class="login modal-body" method="post">
-          <input type="email" name="correo" class="inputs" placeholder="Correo electronico">
-          <input type="password" name="contraseña" class="inputs" placeholder="Contraseña">
-          <input type="submit" class=" entrar btn btn-primary" value="Entrar" name="registrar">
+        <form class="login modal-body"  method="post">
+          <input type="email" name="correo" class="inputs" id="correo" placeholder="Correo electronico">
+          <input type="password" name="contraseña" class="inputs" id="contraseña" placeholder="Contraseña">
+          <input type="button" class=" entrar btn btn-primary" id="login" value="Entrar" name="registrar">
         </form>
+        <span id="result"></span>
       </div>
     </div>
   </div>
@@ -57,5 +58,8 @@
 
     include("registro.php");
    ?>
+   <script type="text/javascript" src="code.js">
+
+   </script>
 </body>
 </html>
