@@ -53,3 +53,17 @@ h3{
   top: 5px;
   right: 10px;
 }
+.btn-radio{
+  border: 1px solid black;
+  display: inline;
+  margin-left: 10px;
+}
+.radios{
+  width: 70%;
+  margin-top: 5px;
+  margin-left:20px ;
+  height: auto;
+}
+.custom-control-label{
+  margin-left: 28px;
+}

@@ -5,7 +5,7 @@ $(document).ready(function(){
       var contraseña = ('#contraseña').val();
       if ($.trim(correo).length > 0 && $.trim(contraseña).length > 0 ) {
         $.ajax({
-          URL:"",
+          URL:"valid-login.php",
           method: "POST",
           data: {correo:correo, contraseña:contraseña},
           cache: 'false',
