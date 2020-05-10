@@ -17,59 +17,40 @@
   <nav class="navbar fixed-top navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Conexion</a>
     <div class="custom-control custom-switch">
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Sign up
-      </button>
+      <a href="index.php" class="btn btn-primary">Iniciar sesion</a>
     </div>
   </nav>
-  <!-- Button  modal -->
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button> -->
-
-<!-- Modal -->
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <h3>log in</h3>
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <form class="login modal-body"  method="post">
-          <input type="email" name="email" class="inputs" id="correo" placeholder="Correo electronico">
-          <input type="password" name="password" class="inputs" id="contraseña" placeholder="Contraseña">
-          <a href="valid-login.php" class=" entrar btn btn-primary" id="login" value="Entrar" name="registrar">Iniciar</a>
-        </form>
-        <span id="result"></span>
-      </div>
-    </div>
-  </div>
-</div> -->
-  <form class="formulario "  method="POST">
+  <form class="formulario " id="formulario" method="POST">
     <h2>registro</h2>
-    <input type="text" name="nombre" class="input"  placeholder="Nombre" >
-    <input type="text" name="apellido" class="input"  placeholder="Apellido">
+    <input type="text" name="nombre" class="input"  placeholder="Nombre" required="" pattern="[a-zA-Z]+">
+    <input type="text" name="apellido" class="input"  placeholder="Apellido" required="" pattern="[a-zA-Z]+">
     <input type="email" name="correo" class="inputs" placeholder="Correo electronico">
-    <input type="password" name="contraseña" class="inputs" placeholder="Contraseña">
-    <input type="text" name="celular" class="inputs" placeholder="Celular">
-    <input type="text" name="fecha-naci" class="inputs" placeholder="Fecha de Nacimiento aaaa/mm/dd">
+    <input type="password" name="contraseña" class="inputs" placeholder="Contraseña" required="" minlength="8">
+    <input type="text" name="celular" class="inputs" placeholder="Celular" required="" pattern="[0-9]+" maxlength="10" minlength="10">
+    <input type="text" name="fecha-naci" class="inputs" placeholder="Fecha de Nacimiento aaaa/mm/dd" maxlength="10" required="" pattern="[0-9-/]+">
+    <div class="city">
+      <select class="custom-select input mr-sm-2 " id="inlineFormCustomSelect" name="ciudad" required="">
+          <option selected>Ciudad</option>
+          <option value="Baranoa">Baranoa</option>
+          <option value="Barranquilla">Barranquilla</option>
+          <option value="Santo tomas">Santo tomas</option>
+        </select>
+    </div>
     <div class="radios">
-      <input class="btn-radio " type="radio" name="sexo" id="defaultCheck1" value="masculino">
+      <input class="btn-radio " type="radio" name="sexo" id="defaultCheck1" value="masculino" checked>
       <label class="label-radio" for="defaultCheck1">Masculino</label>
       <input class="btn-radio" type="radio" name="sexo" id="defaultCheck2" value="femenino">
       <label class="label-radio" for="defaultCheck2">Femenino</label>
     </div>
     <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="customCheck1">
-      <label class="custom-control-label" for="customCheck1">Terminos y condiciones.</label>
+      <input type="checkbox" class="custom-control-input" id="customCheck1" name="tyc" value="true" checked>
+      <label href="#" class="custom-control-label" for="customCheck1" >Terminos y condiciones.</label>
     </div>
-    <input type="submit" class=" entrar btn btn-primary" value="Entrar" name="registrar">
+    <input type="submit" class=" entrar btn btn-primary" value="Entrar" name="registrar" id="registrar">
   </form>
   <?php
 
     include("registro.php");
    ?>
-   <script type="text/javascript" src="code.js"></script>
 </body>
 </html>

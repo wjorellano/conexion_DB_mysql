@@ -8,7 +8,7 @@ body{
   background: rgba(88,89,103,.37);
 }
 .formulario{
-  margin: 140px auto;
+  margin: 100px auto;
   border-radius: 6px;
   width: 30%;
   background: white;
@@ -66,4 +66,7 @@ h3{
 }
 .custom-control-label{
   margin-left: 28px;
+}
+.city{
+  margin-top: 12px;
 }
