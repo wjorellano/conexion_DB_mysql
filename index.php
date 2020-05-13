@@ -31,9 +31,9 @@
     <div class="city">
       <select class="custom-select input mr-sm-2 " id="inlineFormCustomSelect" name="ciudad" required="">
           <option selected>Ciudad</option>
-          <option value="Baranoa">Baranoa</option>
+          <option value="Medellin">Medellin</option>
           <option value="Barranquilla">Barranquilla</option>
-          <option value="Santo tomas">Santo tomas</option>
+          <option value="Bogota">Bogota</option>
         </select>
     </div>
     <div class="radios">
@@ -43,7 +43,7 @@
       <label class="label-radio" for="defaultCheck2">Femenino</label>
     </div>
     <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="customCheck1" name="tyc" value="true" checked>
+      <input type="checkbox" class="custom-control-input" id="customCheck1" name="tyc" value="Acepto" required checked>
       <label href="#" class="custom-control-label" for="customCheck1" >Terminos y condiciones.</label>
     </div>
     <input type="submit" class=" entrar btn btn-primary" value="Entrar" name="registrar" id="registrar">
